@@ -21,18 +21,12 @@ export const AppNavigation = () => {
           <Stack.Screen
             name={Screens.ResponsiveCardScreen}
             component={ResponsiveCardScreen}
-            options={{ headerShown: false }}
           />
           <Stack.Screen
             name={Screens.InfinityScrollScreen}
             component={InfinityScrollScreen}
-            options={{ headerShown: false }}
           />
-          <Stack.Screen
-            name={Screens.FormsScreen}
-            component={FormsScreen}
-            options={{ headerShown: false }}
-          />
+          <Stack.Screen name={Screens.FormsScreen} component={FormsScreen} />
         </>
       </Stack.Navigator>
     </NavigationContainer>

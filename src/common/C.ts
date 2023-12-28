@@ -1,1 +1,4 @@
-export const GO_TO_RESPONSE = 'go to response';
+export const RESPONSE = 'Response';
+export const INFINITY = 'Infinity';
+export const FORMS = 'Forms';
+export const WIDTH = 'Width: ';

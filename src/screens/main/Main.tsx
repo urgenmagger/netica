@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { StyleSheet, View, Button } from 'react-native';
 
-import { GO_TO_RESPONSE } from 'common/C';
+import { FORMS, INFINITY, RESPONSE } from 'common/C';
 import { useNavigation } from '@react-navigation/native';
 import { RootStackNavigationProp, Screens } from 'navigation/types';
 
@@ -15,12 +15,20 @@ export const Main: FC<Props> = () => {
     navigation.navigate(Screens.ResponsiveCardScreen);
   };
 
+  const handleGoInfinity = () => {
+    navigation.navigate(Screens.InfinityScrollScreen);
+  };
+
+  const handleGoForm = () => {
+    navigation.navigate(Screens.FormsScreen);
+  };
+
   const componentStyle = styles();
   return (
     <View style={{ ...componentStyle.container }}>
-      <Button title={GO_TO_RESPONSE} onPress={handleGoResponsive} />
-      <Button title={GO_TO_RESPONSE} onPress={() => console.log('click')} />
-      <Button title={GO_TO_RESPONSE} onPress={() => console.log('click')} />
+      <Button title={RESPONSE} onPress={handleGoResponsive} />
+      <Button title={INFINITY} onPress={handleGoInfinity} />
+      <Button title={FORMS} onPress={handleGoForm} />
     </View>
   );
 };
